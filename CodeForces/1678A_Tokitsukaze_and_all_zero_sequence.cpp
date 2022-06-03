@@ -5,7 +5,8 @@ void changeNumber(vector<int> arr_)
 {
     for (int i = 0; i < arr_.size(); i++)
     {
-        /* code */
+        if (arr_[i] == arr_[i + 1])
+            arr
     }
 }
 
