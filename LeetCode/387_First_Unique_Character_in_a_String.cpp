@@ -3,15 +3,19 @@ using namespace std;
 
 int firstUniqChar(string s)
 {
-    char arr[s.size()];
-    int count = 0;
+    int n = s.size();
+    char arr[n];
     strcpy(arr, s.c_str());
-    for (int i = 0; i < s.size(); i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = i + 1; j < s.size(); j++)
+        for (int j = 0; j < n; j++)
         {
+            if (i == j)
+                continue;
             if (arr[i] == arr[j])
-                i++;
+            {
+                i++, j = 0;
+            }
         }
         return i;
     }
